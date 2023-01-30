@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block head %}
-  <title>这是我的笔记首页</title>
+  <title>大横断历史文化</title>
 {% endblock head %}
 
 {% block content %}
@@ -17,7 +17,7 @@
     <div class="content">
       {{ article.desc }}...
 
-      <a href="{% url 'blog:article' article.id %}" class="button is-pulled-right is-primary" style="margin-top: 1em">阅读更多</a>
+      <a href="{% url 'blog:article' article.id %}" class="button is-pulled-right is-info" style="margin-top: 1em">阅读更多</a>
       <div class=" is-clearfix"></div>
     </div> 
 </div>

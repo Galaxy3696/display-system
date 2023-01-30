@@ -20,8 +20,8 @@
     <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="{% url 'blog:index' %}">
-            <img src="{% static 'account/images/l.png' %}" width="35" height="85">
-            大横断大横断历史文化系统
+            <img src="{% static 'account/images/logo.jpg' %}" width="35" height="85">
+            大横断历史文化系统
           </a>      
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -96,14 +96,14 @@
                             <ul class="content menu-list">
                                 <li><a href="{% url 'account:person' %}">个人信息</a></li>
                                 <li><a href="{% url 'password_change' %}">修改密码</a></li>
-                                <!-- <li><a href="{% url 'password_reset' %}">找回密码</a></li> -->
+
                             </ul>
                         </div>
                            
                     </div>
                     <div class="card">
                             <header class="card-header">
-                                <p class="card-header-title">内容管理</p>
+                                <p class="card-header-title">后台管理</p>
                                 <a href="#" class="card-header-icon" aria-label="more options">
                                     <span class="icon">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -112,11 +112,8 @@
                             </header>
                             <div class="card-content menu">
                                 <ul class="content menu-list">
-                                    {% comment %} <li><a href="{% url 'account:person_add_article' %}">添加文章</a></li> {% endcomment %}
-                                    {% comment %} <li><a href="{% url 'account:person_article' %}">已发布</a></li> {% endcomment %}
-                                    <li><a href="">草稿箱</a></li>
-                                    <li><a href="">评论管理</a></li>
-                                    <li><a href="">数据分析</a></li>
+                                    <li><a href="http://127.0.0.1:8000/admin">进入后台</a></li>
+
                                 </ul>
                             </div>
                                
@@ -154,18 +151,15 @@
                             <p>个人信息</p>  
                         </div>
                         <div class="column">
-                            <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">
-                                <div class="column is-2">
-                                   <span class=" has-text-grey-light">用户类型</span> 
-                                </div>
-                                    <div class="column is-narrow">
-                                        <span class=" has-text-black-ter">{{ user.userinfo.get_user_type_display }}</span>
-                                    </div>
-                                <div class="column has-text-right">
-                                    <a href="">更改类型</a>
-                                </div>
-                                        
-                            </div>
+{#                            <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">#}
+{#                                <div class="column is-2">#}
+{#                                   <span class=" has-text-grey-light">用户类型</span>#}
+{#                                </div>#}
+{#                                    <div class="column is-narrow">#}
+{#                                        <span class=" has-text-black-ter">{{ user.userinfo.get_user_type_display }}</span>#}
+{#                                    </div>#}
+{##}
+{#                            </div>#}
                             <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">
                                 <div class="column is-2">
                                    <span class=" has-text-grey-light">手机</span> 
@@ -173,8 +167,7 @@
                                 <div class="column is-narrow">
                                     <span class=" has-text-black-ter">{{ user.userinfo.phone }}</span>
                                 </div>
-                                <!-- <div class="column"></div> -->
-                                
+                                <div class="column"></div>
                             </div>
                             <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">
                                 <div class="column is-2">

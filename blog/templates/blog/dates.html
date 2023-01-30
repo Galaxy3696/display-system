@@ -9,7 +9,7 @@
         每月归档：{{ year }}年{{ month }}月
         <div class="tags has-addons is-pulled-right">
           <span class="tag">共</span>
-          <span class="tag is-primary">{{ blog_dates.count }} 篇</span>
+          <span class="tag is-info">{{ blog_dates.count }} 篇</span>
         </div>
 </div>
 <!-- 显示当前分类模块 end-->
@@ -26,7 +26,7 @@
     <div class="content">
       {{ article.desc }}...
 
-      <a href="{% url 'blog:article' article.id %}" class="button is-pulled-right is-primary" style="margin-top: 1em">阅读更多</a>
+      <a href="{% url 'blog:article' article.id %}" class="button is-pulled-right is-info" style="margin-top: 1em">阅读更多</a>
       <div class=" is-clearfix"></div>
     </div> 
 </div>

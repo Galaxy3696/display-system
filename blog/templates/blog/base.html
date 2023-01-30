@@ -17,7 +17,7 @@
   <header class="container menu-header">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <img src="{% static 'account/images/logo.jpg' %}" width="55" height="55">
+          <img src="{% static 'blog/images/logo.jpg' %}" width="55" height="55">
           <h1 class="navbar-item is-size-3">大横断历史文化系统</h1>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -38,7 +38,24 @@
                 {{ category.name }}
             </a>
         {% endfor %}    
-           
+             <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          更多
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            关于我们
+          </a>
+          <a class="navbar-item">
+            联系我们
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            错误报告
+          </a>
+        </div>
+      </div>
         </div>
     {% else %}
         <p>还没有添加任何分类</p>
@@ -49,12 +66,12 @@
             {% if user.is_authenticated %}
             <div class="buttons">
                 <a href="{% url 'account:person' %}" class="button is-info">个人中心</a>
-                <a href="{% url 'logout' %}" class="button is-primary">退出</a>
+                <a href="{% url 'logout' %}" class="button is-info">退出</a>
             </div>
             {% else %}
             <div class="buttons">
               <a href="{% url 'login' %}" class="button is-info">登录</a>
-              <a href="{% url 'account:register' %}" class="button is-primary">注册</a>
+              <a href="{% url 'account:register' %}" class="button is-info">注册</a>
             </div>
             {% endif %}
           </div>
@@ -87,7 +104,7 @@
         <!-- 文章归档 -->
         {% get_month_list as archive_list %}
         <div class="box is-shadowless is-radiusless">
-          <h1 class="title is-size-5">文章归档</h1>
+          <h1 class="title is-size-5">时间排序</h1>
           {% if archive_list %}
           {% for archive in archive_list %}
           <article class="media" >
@@ -100,10 +117,10 @@
             </article>
           {% endfor %}
       {% else %}
-      <p>还没有任何评论！</p>
+      <p>还没有任何文章！</p>
       {% endif %}
         </div>
-        <!-- 文章归档 end -->
+        <!-- 时间归档 end -->
 
         
         <!-- 侧边栏评论 -->
@@ -131,24 +148,6 @@
         </div>
          <!-- 侧边栏评论 end-->
 
-   <!-- 文章标签 -->
-   {% get_tags_list as tags %}
-   <div class="box is-shadowless is-radiusless">
-     <h1 class="is-size-5 title">文章归档</h1>
-     {% if tags %}
-     {% for tag in tags %}
-     <a href="{% url 'blog:tags' tag.id %}">
-      <span class="tag">
-        {{ tag }}
-      </span>
-    </a>
-     {% endfor %}
-    
- {% else %}
- <p>还没有任何评论！</p>
- {% endif %}
-   </div>
-   <!-- 文章标签 end -->
 
           {% endblock aside %} 
       </div>
@@ -160,8 +159,9 @@
 
   <!-- 笔记底部通用 footer -->
   <footer class=" footer has-text-centered">
-    <p class="has-text-black"></p>
-    <p class="has-text-black">元旦快乐!</p> 
+    <p class="has-text-black">欢迎使用大横断历史文化系统！</p>
+    <p class="has-text-black">联系我们：mengsy20@lzu.edu.cn</p>
+
 
   </footer>
    <!-- 笔记底部通用 footer end-->

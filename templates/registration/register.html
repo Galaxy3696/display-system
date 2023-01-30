@@ -58,17 +58,12 @@
               </p>
             {% endfor %}
         {% endif %}
-        
-{#        <!-- 判断是否拥有找回密码连接，有则给出 -->#}
-{#        {% url 'password_reset' as password_reset_url %}#}
-{#        {% if password_reset_url %}#}
-{#        <div class="password-reset-link">#}
-{#            <a class=" is-size-7" href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>#}
-{#        </div>#}
-{#        {% endif %}#}
+
 
         <!-- 登录按钮 -->
+
         <div class="submit-row" style="padding-top: 2em">
+            <p class="is-pulled-left"><a href="{% url 'login' %}">{% trans '返回登录' %}</a></p>
             <label>&nbsp;</label><input class="button is-info is-pulled-right" type="submit" value="{% trans '注册' %}">
         </div>
     </form> 
