@@ -27,7 +27,7 @@
     <div class="box has-background-white" > 
         <div class="content">
             <h1 class=" is-uppercase has-text-centered has-text-weight-bold" style="padding: 0.5em 0">
-                大横断大横断历史文化系统
+                欢迎注册大横断历史文化系统
             <br><span class="tag">注册</span>
             </h1>
             <hr class="dropdown-divider">
@@ -60,13 +60,13 @@
             {% endfor %}
         {% endif %}
         
-        <!-- 判断是否拥有找回密码连接，有则给出 -->
-        {% url 'password_reset' as password_reset_url %}
-        {% if password_reset_url %}
-        <div class="password-reset-link">
-            <a class=" is-size-7" href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
-        </div>
-        {% endif %}
+{#        <!-- 判断是否拥有找回密码连接，有则给出 -->#}
+{#        {% url 'password_reset' as password_reset_url %}#}
+{#        {% if password_reset_url %}#}
+{#        <div class="password-reset-link">#}
+{#            <a class=" is-size-7" href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>#}
+{#        </div>#}
+{#        {% endif %}#}
 
         <!-- 登录按钮 -->
         <div class="submit-row">
