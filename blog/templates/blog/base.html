@@ -135,7 +135,7 @@
                       <p>
                         <span class="is-size-7 has-text-grey-light">
                           <a href="">{{ comment.author }}</a> 于 {{ comment.add_date|date }}发表评论：</span><br>
-                         <a href="{% url 'blog:article' comment.article.id %}">{{ comment.content }}</a>
+                         <a href="{% url 'blog:blog' comment.article.id %}">{{ comment.content }}</a>
                       </p>
                       
                     </div>

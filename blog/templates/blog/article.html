@@ -40,7 +40,7 @@
       <span class="tag is-white has-text-black-ter is-paddingless">文章标签：</span>
       {% for tag in article.tags.all %}
         <span class="tag is-white is-paddingless">
-          <a href="{% url 'blog:article' article.id %}">{{ tag }}</a>  
+          <a href="{% url 'blog:blog' article.id %}">{{ tag }}</a>
         </span>
       {% endfor %}
     {% else %}
@@ -60,7 +60,7 @@
       
       {% if per_article %}
         <span class=" is-size-7">上一篇：</span>
-        <a href="{% url 'blog:article' per_article.id %}">{{ per_article }}</a> 
+        <a href="{% url 'blog:blog' per_article.id %}">{{ per_article }}</a>
         {% else %}
         <span class=" is-size-7">上一篇：</span>
         <span class=" has-text-danger">没有了！</span> 
@@ -69,7 +69,7 @@
     <div class="column is-6 has-text-right">
         {% if next_article %}
         <span class=" is-size-7">下一篇：</span>
-        <a href="{% url 'blog:article' next_article.id %}">{{ next_article }}</a>  
+        <a href="{% url 'blog:blog' next_article.id %}">{{ next_article }}</a>
         {% else %}
         <span class=" is-size-7">下一篇：</span>
         <span class=" has-text-danger">没有了！</span> 
