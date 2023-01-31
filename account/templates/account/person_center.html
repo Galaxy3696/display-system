@@ -15,7 +15,7 @@
     
 </head>
 <body>
-    <!-- 头部 -->
+
     <nav class="navbar has-shadow" role="navigation" aria-label="main navigation" style="min-height: 4rem">
     <div class="container">
         <div class="navbar-brand">
@@ -31,7 +31,6 @@
         </div>
       
         <div id="navbarBasicExample" class="navbar-menu">
-      
           <div class="navbar-end">
             <div class="navbar-item">
                 <!-- 个人中心下拉菜单 -->
@@ -77,49 +76,12 @@
         </div>
     </div>
     </nav>
-    <!-- 头部 end -->
+
     <section class="section">
         <div class="container">
             {% block section %}
             <div class="columns">
-                <div class="column is-2">
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">个人中心</p>
-                            <a href="#" class="card-header-icon" aria-label="more options">
-                                <span class="icon">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                        </header>
-                        <div class="card-content menu">
-                            <ul class="content menu-list">
-                                <li><a href="{% url 'account:person' %}">个人信息</a></li>
-                                <li><a href="{% url 'password_change' %}">修改密码</a></li>
-
-                            </ul>
-                        </div>
-                           
-                    </div>
-                    <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">后台管理</p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                                    <span class="icon">
-                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </header>
-                            <div class="card-content menu">
-                                <ul class="content menu-list">
-                                    <li><a href="http://127.0.0.1:8000/admin">进入后台</a></li>
-
-                                </ul>
-                            </div>
-                               
-                    </div>
-                </div>
-                <div class="column is-9">
+                <div class="column is-10">
                     <div class="box is-radiusless is-shadowless">
                         {% block person %}
                         <div class="tabs">
@@ -144,11 +106,11 @@
                         <div class="column is-narrow-mobile">
                             <a class=" button is-light is-pulled-right" href="{% url 'account:edit_user' %}" style="margin-top: 1.8rem">修改信息</a>
                         </div>
-                    </div>    
-                    
+                    </div>
+
                     <div class="columns" style="padding:1rem 0; ">
                         <div class="column is-2">
-                            <p>个人信息</p>  
+                            <p>个人信息</p>
                         </div>
                         <div class="column">
 {#                            <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">#}
@@ -162,7 +124,7 @@
 {#                            </div>#}
                             <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">
                                 <div class="column is-2">
-                                   <span class=" has-text-grey-light">手机</span> 
+                                   <span class=" has-text-grey-light">手机</span>
                                 </div>
                                 <div class="column is-narrow">
                                     <span class=" has-text-black-ter">{{ user.userinfo.phone }}</span>
@@ -171,20 +133,20 @@
                             </div>
                             <div class="columns is-mobile" style="border-bottom: #ededed solid 1px">
                                 <div class="column is-2">
-                                   <span class=" has-text-grey-light">邮箱</span> 
+                                   <span class=" has-text-grey-light">邮箱</span>
                                 </div>
                                 <div class="column is-narrow">
                                     <span class=" has-text-black-ter">{{ user.email }}</span>
                                 </div>
                                 <!-- <div class="column"></div> -->
-                                    
+
                             </div>
                         </div>
                     </div>
 
                     <div class="columns" style="padding:1rem 0; ">
                         <div class="column is-2">
-                            <p>个人简介</p>  
+                            <p>个人简介</p>
                         </div>
                         <div class="column">
                             <div class="content">
@@ -192,8 +154,45 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     {% endblock person %}
+                    </div>
+                </div>
+                 <div class="column is-3">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">个人中心</p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content menu">
+                            <ul class="content menu-list">
+                                <li><a href="{% url 'account:person' %}">个人信息</a></li>
+                                <li><a href="{% url 'password_change' %}">修改密码</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">后台管理</p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                                    <span class="icon">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </header>
+                            <div class="card-content menu">
+                                <ul class="content menu-list">
+                                    <li><a href="http://127.0.0.1:8000/admin">进入后台</a></li>
+
+                                </ul>
+                            </div>
+
                     </div>
                 </div>
             </div>
