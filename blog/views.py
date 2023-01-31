@@ -55,7 +55,7 @@ def blog_get_dates(request, year, month):
     return render(request, 'blog/dates.html', locals())
 
 
-def blog_get_tags(request, tag_id):
-    """ 标签列表页 """
-    tag = get_object_or_404(Tags, id=tag_id)
-    return render(request, 'blog/tags.html', locals())
+# def blog_get_tags(request, tag_id):
+#     """ 标签列表页 """
+#     tag = get_object_or_404(Tags, id=tag_id)
+#     return render(request, 'blog/tags.html', locals())

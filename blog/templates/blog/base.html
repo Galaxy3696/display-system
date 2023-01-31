@@ -15,9 +15,9 @@
 <body>
 <!-- 笔记导航栏 -->
   <header class="container menu-header">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="background-image: url({%static 'blog/images/banner.jpeg' %})">
         <div class="navbar-brand">
-          <img src="{% static 'blog/images/logo.jpg' %}" width="55" height="55">
+{#          <img src="{% static 'blog/images/logo.jpg' %}" width="55" height="55">#}
           <h1 class="navbar-item is-size-3">大横断历史文化系统</h1>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -158,7 +158,7 @@
   </section>
 
   <!-- 笔记底部通用 footer -->
-  <footer class=" footer has-text-centered">
+  <footer class=" footer has-text-centered" style="background-image: url({%static 'blog/images/banner.jpeg' %})">
     <p class="has-text-black">欢迎使用大横断历史文化系统！</p>
     <p class="has-text-black">联系我们：mengsy20@lzu.edu.cn</p>
 
